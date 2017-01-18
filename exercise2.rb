@@ -21,8 +21,15 @@ class Cat
     end
   end
 
+  def meow
+    puts "My name is #{@name} and I eat #{preferred_food} at #{eats_at}."
+  end
+
 end
 
 
 bean = Cat.new('Bean', 'kibble', 18)
-pumpkin = Cat.new('Pumpkin', 'milk', 11)
+pumpkin = Cat.new('Pumpkin', 'tuna', 11)
+
+bean.meow
+pumpkin.meow
