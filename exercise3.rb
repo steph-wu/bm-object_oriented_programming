@@ -27,6 +27,10 @@ class Player
     end
   end
 
+  def level_up
+    @lives += 1
+  end
+
 end
 
 test = Player.new(10, 1, 2, 5)
