@@ -25,6 +25,10 @@ class Paperboy
     return @earnings
   end
 
+  def report
+    "I'm #{@name}, I've delivered #{@experience} papers and I've earned #{@earnings} so far!"
+  end
+
 end
 
 jim = Paperboy.new("Jim", 0)
@@ -32,7 +36,9 @@ jim = Paperboy.new("Jim", 0)
 puts jim.quota
 puts jim.deliver(101,160)
 puts jim.earnings
+puts jim.report
 
 puts jim.quota
 puts jim.deliver(1,75)
 puts jim.earnings
+puts jim.report
