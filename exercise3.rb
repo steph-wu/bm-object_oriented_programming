@@ -31,18 +31,10 @@ class Player
     @lives += 1
   end
 
+  def collect_treasure(amount)
+    @gold_coins += amount
+    @score += 1 if @gold_coins >= 10
+    level_up if @score == 10
+  end
+
 end
-
-test = Player.new(10, 1, 2, 5)
-
-puts test.gold_coins
-puts test.health_points
-puts test.lives
-puts test.score
-
-test.do_battle
-
-puts test.gold_coins
-puts test.health_points
-puts test.lives
-puts test.score
